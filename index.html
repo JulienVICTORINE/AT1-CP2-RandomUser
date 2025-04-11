@@ -10,28 +10,33 @@
   </head>
   <body>
     <main>
-      <div class="card">
+      <div class="card" id="card-container">
         <div class="card-header">
-          <img src="images/iron-man-6480952_1280.webp" alt="Mon profil" />
+          <img
+            id="picture"
+            src="images/iron-man-6480952_1280.webp"
+            alt="Photo de profil"
+          />
         </div>
 
         <div class="card-body">
-          <p id="info-title">Nom & Prénom</p>
-          <h2 id="info-value">Julien VICTORINE</h2>
-          <p id="info-title">Genre</p>
-          <h2 id="info-value">Masculin</h2>
-          <p>Adresse e-mail</p>
-          <h2 id="info-value">julien.victorine@example.com</h2>
-          <p id="info-title">Âge</p>
-          <h2 id="info-value">27 ans</h2>
-          <p id="info-title">Adresse postale</p>
-          <h2 id="info-value">2549 Hillcrest Rd</h2>
-          <p id="info-title">N° téléphone</p>
-          <h2 id="info-value">(+262694124578)</h2>
-          <p id="info-title">Mot de passe</p>
-          <h2 id="info-value">Yoyoso</h2>
+          <p class="info-title">Nom & Prénom</p>
+          <h2 class="info-value" id="name">Julien VICTORINE</h2>
+          <p class="info-title">Genre</p>
+          <h2 class="info-value" id="gender">Masculin</h2>
+          <p class="info-title">Adresse e-mail</p>
+          <h2 class="info-value" id="email">julien.victorine@example.com</h2>
+          <p class="info-title">Âge</p>
+          <h2 class="info-value" id="age">27 ans</h2>
+          <p class="info-title">Adresse postale</p>
+          <h2 class="info-value" id="location">2549 Hillcrest Rd</h2>
+          <p class="info-title">N° Téléphone</p>
+          <h2 class="info-value" id="phone">(+00) 0123456</h2>
         </div>
       </div>
     </main>
+
+    <!-- Lien JS -->
+    <script src="script.js"></script>
   </body>
 </html>

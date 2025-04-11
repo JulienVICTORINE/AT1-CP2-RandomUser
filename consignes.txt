@@ -8,3 +8,7 @@ Rédiger sa propre api.
 
 
 https://randomuser.me/
+
+
+penser à réflechir pour le verso de la carte
+effet d'animation sur la carte
