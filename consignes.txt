@@ -1,0 +1,10 @@
+Version 1 : Rédiger un code qui affiche une carte d'un utilisateur comprenant les informations disponibles via l'api RandomUser. (Sans utiliser l'api)
+
+Version 2 : 
+Remplacer les données à chaque chargement de page par les informations reçues par l'api.
+
+Version 3 : 
+Rédiger sa propre api.
+
+
+https://randomuser.me/
