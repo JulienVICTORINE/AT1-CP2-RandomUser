@@ -19,36 +19,41 @@ window.addEventListener("DOMContentLoaded", fetchRandomUser); // JS attend que l
 
 // 3. Fonction pour aller chercher un utilisateur
 async function fetchRandomUser() {
-  const request = await fetch("https://randomuser.me/api/");
+  const request = await fetch("https://randomuser.me/api/?results=20");
   const response = await request.json();
+
   const user = response.results[0]; // je récupère l'utilisateur
 
   // 4. Remplacer les infos de la carte
-  cardContainer.innerHTML = `
-    <div class="card-header">
-        <img
-        src="${user.picture.large}"
-        alt="Photo de profil"
-        />
-    </div>
-    <div class="card-body">
-        <p class="info-title">Nom & Prénom</p>
-        <h2 class="info-value">${user.name.first} ${user.name.last}</h2>
-        <p class="info-title">Genre</p>
-        <h2 class="info-value">${
-          user.gender == "female" ? "Femme" : "Homme"
-        }</h2>
-        <p class="info-title">Adresse e-mail</p>
-        <h2 class="info-value">${user.email}</h2>
-        <p class="info-title">Âge</p>
-        <h2 class="info-value">${user.dob.age}</h2>
-        <p class="info-title">Adresse postale</p>
-        <h2 class="info-value">${user.location.street.number} ${
+  document.body.innerHTML += `
+        <div class="card" id="card-container">
+        <div class="card-header">
+          <img
+            id="picture"
+            src="${user.picture.large}"
+            alt="Photo de profil"
+          />
+        </div>
+        <div class="card-body">
+          <p class="info-title">Nom & Prénom</p>
+          <h2 class="info-value" id="name">${user.name.first} ${
+    user.name.last
+  }</h2>
+          <p class="info-title">Genre</p>
+          <h2 class="info-value" id="gender">${
+            user.gender == "female" ? "Femme" : "Homme"
+          }</h2>
+          <p class="info-title">Adresse e-mail</p>
+          <h2 class="info-value" id="email">${user.email}</h2>
+          <p class="info-title">Âge</p>
+          <h2 class="info-value" id="age">${user.dob.age}</h2>
+          <p class="info-title">Adresse postale</p>
+          <h2 class="info-value" id="location">${user.location.street.number} ${
     user.location.street.name
   }, ${user.location.city}</h2>
-        <p class="info-title">N° Téléphone</p>
-        <h2 class="info-value">+${user.phone}</h2>
-    </div>
+          <p class="info-title">N° Téléphone</p>
+          <h2 class="info-value" id="phone">${user.phone}</h2>
+        </div>
     `;
 
   //   if(user.gender == "female"){
